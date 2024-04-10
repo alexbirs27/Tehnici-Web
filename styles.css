@@ -9,7 +9,6 @@ body {
   height: 97vh;
   background-size: cover;
   background-position: center;
-  min-height: 100px;
 }
 
 .flex-container {
@@ -35,7 +34,7 @@ body {
   position: absolute;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   background-color: #ffffff;
-  min-width: 160px;
+  min-width: 10em;
   z-index: 1;
 }
 
@@ -57,7 +56,7 @@ body {
 .dynamic-button, .complex-button {
   color: white;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: medium;
   display: inline-block;
   margin: 10px;
 }
@@ -129,12 +128,12 @@ ul li a:hover {
 
 body section:first-of-type {
   color: white;
-  margin-top: 300px;
+  margin-top: 10em;
 }
 
 section {
-  font-size: 30px;
-  margin-top: 300px;
+  font-size: 1.5em;
+  margin-top: 10em;
   margin-right: 40px;
   margin-left: 40px;
   color: rgb(255, 255, 255);
@@ -142,12 +141,12 @@ section {
 
 h1 {
   margin-left: 100px;
-  font-size:50px;
+  font-size:2em;
 }
 
 ul.punct {
   list-style-type: disc !important;
-  margin-left: 200px;
+  margin-left: 10em;
 }
 
 section article {
@@ -156,23 +155,23 @@ section article {
 
 li b {
   animation: TextAnimation 10s infinite ease-in-out;
-  font-size: 35px;
+  font-size: 1.7em;
 }
 
 .footer {
-  position: absolute;
-  bottom:0;
-  width:97vw;
+  position: relative;
+  width:100%;
   text-align: center;
-  font-size: 40px;
+  font-size: 2.5em;
   color: white;
+  margin-top:5.4em;
   padding: 20px 0;
 }
 
 .nav-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 200px;
+  gap: 5em;
   padding: 20px;
 }
 
@@ -184,7 +183,7 @@ li b {
   text-align: center;
 }
 
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (max-width: 1524px) {
   .flex-container {
     flex-direction: column;
   }
@@ -199,12 +198,10 @@ li b {
   .nav-grid a, .flex-container a {
     font-size: 1.2rem;
   }
-  .footer{
-    display: none;
-  }
+
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1525px) {
   body {
     padding: 20px;
     font-size: 1.2rem;
@@ -212,8 +209,5 @@ li b {
 
   .nav-grid {
     gap: 50px;
-  }
-  .footer{
-    display: none;
   }
 }
