@@ -1,0 +1,219 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Century;
+}
+
+body {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)), url('bec.jpg');
+  height: 97vh;
+  background-size: cover;
+  background-position: center;
+  min-height: 100px;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+.flex-container li {
+  position: relative;
+  margin-left: 20px;
+}
+
+.flex-container a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content li {
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dynamic-button, .complex-button {
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.dynamic-button {
+  background-color: green;
+  transition: background-color 1s ease, transform 1s ease;
+}
+
+.dynamic-button:hover {
+  background-color: red;
+  transform: scale(1.2);
+}
+
+@keyframes complexAnimation {
+  0% {
+    background-color: hsl(251, 100%, 50%);
+    border-color: transparent;
+    transform: scale(1);
+  }
+  50% {
+    background-color: purple;
+    border-color: yellow;
+    transform: scale(1.1);
+  }
+  100% {
+    background-color: hsl(251, 100%, 50%);
+    border-color: transparent;
+    transform: scale(1);
+  }
+}
+
+@keyframes TextAnimation{
+  0%{
+    color: rgb(255, 0, 0);
+  }
+  25%{ color: rgb(71, 216, 45);}
+  100%{color: rgb(255, 0, 0);}
+}
+.complex-button {
+  background-color: blue;
+  border: 2px solid transparent;
+  animation: complexAnimation 2s infinite ease-in-out;
+}
+
+ul {
+  float: right;
+  margin-top: 30px;
+  min-height: 100px;
+  margin-right: 60px;
+  font-size: 25px;
+}
+
+ul li {
+  display: inline-block;
+}
+
+ul li a {
+  color: red;
+  padding: 20px 50px;
+  border: 1px solid transparent;
+  transition: 0.5s ease;
+}
+
+ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+body section:first-of-type {
+  color: white;
+  margin-top: 300px;
+}
+
+section {
+  font-size: 30px;
+  margin-top: 300px;
+  margin-right: 40px;
+  margin-left: 40px;
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  margin-left: 100px;
+  font-size:50px;
+}
+
+ul.punct {
+  list-style-type: disc !important;
+  margin-left: 200px;
+}
+
+section article {
+  margin-left: 20px;
+}
+
+li b {
+  animation: TextAnimation 10s infinite ease-in-out;
+  font-size: 35px;
+}
+
+.footer {
+  position: absolute;
+  bottom:0;
+  width:97vw;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  padding: 20px 0;
+}
+
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 200px;
+  padding: 20px;
+}
+
+.nav-grid a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  ul, .nav-grid {
+    grid-template-columns: 1fr;
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .nav-grid a, .flex-container a {
+    font-size: 1.2rem;
+  }
+  .footer{
+    display: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  body {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+
+  .nav-grid {
+    gap: 50px;
+  }
+  .footer{
+    display: none;
+  }
+}
