@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Personala</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn">Meniu</button>
+            <div class="dropdown-content">
+                <a href="#despre">Despre</a>
+                <a href="#contact">Contact</a>
+                <div class="dropdown-submenu">
+                    <a class="submenu-btn">Proiecte</a>
+                    <div class="dropdown-content-submenu">
+                        <a href="https://github.com/alexbirs27/Tehnici-Web" target="_blank">Tema Web</a>
+                        <a href="https://github.com/alexbirs27/Proiect_OOP" target="_blank">OOP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1>Pagina Personala</h1>
+    </header>
+    
+    <main>
+        <section id="despre">
+            <p>Sunt Alex Birsan, un pasionat de programare și algoritmi. Acesta este site-ul meu personal unde puteți afla mai multe despre mine și proiectele mele.</p>
+        </section>
+        <section id="linkuri">
+            <button class="github" onclick="window.location.href='https://github.com/alexbirs27'">Github</button>
+            <button class="infoarena" onclick="window.location.href='https://www.infoarena.ro/'">Infoarena</button>
+            <button class="instagram" onclick="window.location.href='https://www.instagram.com/alexcristianbirsan/'">Instagram</button>
+            <button class="jocul-meu" onclick="window.location.href='register.html'">Jocul Meu</button>
+            <button class="login" onclick="window.location.href='login.html'" style="background-color: green;">Login</button>
+        </section>
+    </main>
+</body>
+</html>

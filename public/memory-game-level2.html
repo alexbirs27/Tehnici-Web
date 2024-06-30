@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game Nivelul 2</title>
+    <link rel="stylesheet" href="memory-game.css">
+</head>
+<body>
+    <script>
+        if (!localStorage.getItem('currentUser')) {
+            window.location.href = 'register.html';
+        } else {
+            const currentUser = localStorage.getItem('currentUser');
+            const players = JSON.parse(localStorage.getItem('players'));
+            const player = players.find(player => player.username === currentUser);
+            document.write(`<h2>Scorul tău: ${player.score}</h2>`);
+        }
+    </script>
+    <h1>Memory Game - Nivelul 2</h1>
+    <div id="game-board" class="level2"></div>
+    <script src="memory-game-level2.js"></script>
+</body>
+</html>
